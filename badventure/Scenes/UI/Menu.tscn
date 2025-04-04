@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2rcqwwai21x1"]
+
+[ext_resource type="Script" uid="uid://cnj05l5pa5l5p" path="res://Scripts/Csharp/UI/Menu.cs" id="1_tij55"]
+
+[sub_resource type="FontVariation" id="FontVariation_eqofo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_00mm5"]
+line_spacing = 2.0
+font = SubResource("FontVariation_eqofo")
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 2.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tij55")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.146
+anchor_top = 0.413
+anchor_right = 0.146
+anchor_bottom = 0.413
+offset_left = -136.192
+offset_top = -50.624
+offset_right = 136.808
+offset_bottom = 50.376
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Start playing
+"
+
+[node name="SettingsButton" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="ExitButton" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="SeedContainer" type="VBoxContainer" parent="Buttons"]
+layout_mode = 2
+
+[node name="SeedLabel" type="Label" parent="Buttons/SeedContainer"]
+layout_mode = 2
+text = "Seed"
+label_settings = SubResource("LabelSettings_00mm5")
+vertical_alignment = 2
+justification_flags = 162
+
+[node name="Seed" type="LineEdit" parent="Buttons/SeedContainer"]
+layout_mode = 2
+placeholder_text = "123456"
+max_length = 16
+virtual_keyboard_type = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00173611
+anchor_top = -0.0138889
+anchor_right = 1.00174
+anchor_bottom = 0.986111
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
